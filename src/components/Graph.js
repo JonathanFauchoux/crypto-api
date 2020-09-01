@@ -12,7 +12,7 @@ export default function Graph ({data}) {
   return (
     <svg width="500" height="300"className="graph">
       {data.map((d, i) => {
-        const color = `hsla(${Math.random() * 360}, 100%, 50%, 1)`;
+        const color = `hsla(${Math.random() * 360}, 80%, 50%, 1)`;
         return (
           <g key={d.id}>
             <rect

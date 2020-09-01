@@ -39,8 +39,10 @@ h3{
   color: #61dafb;
 }
 th{
-  width: 25%;
+  width: 100px;
   padding: 1rem;
+  background-color: #282c34;
+  color: white;
 }
 table{
   padding-bottom: 2rem;
@@ -51,7 +53,7 @@ table{
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
+  padding: 3rem 0;
  
 }
 
