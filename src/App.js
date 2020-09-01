@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
 import CryptoTable from './components/CryptoTable'
+import Graph from './components/Graph'
 import axios from "axios";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currencies: ["bitcoin", "ethereum", "cosmos"],
+      currencies: ["tether", "litecoin", "cosmos","polkadot", "binancecoin"],
       api: {
         time: Date.now(),
         datas: []
@@ -19,7 +20,8 @@ export default class App extends Component {
     // Get the api form the local storage
     const apiFromLocalStorage = JSON.parse(localStorage.getItem("api"));
     // If the api is not in the local storage, get the api from Axios and update the state and the local storage
-     if (apiFromLocalStorage.time === null)   this.updateStateWithAxios();
+    // if (apiFromLocalStorage.time === undefined)   
+    this.updateStateWithAxios();
     //console.log(apiFromLocalStorage)
     //console.log('data', this.state.api.datas)
     // check if the "time" date from local storage is older than 5min.
@@ -68,6 +70,7 @@ export default class App extends Component {
         <h1>CryptoTable</h1>
         <CryptoTable data={this.state.api.datas}/>
         
+        <Graph data={this.state.api.datas}/>
       </div>
     );
   }

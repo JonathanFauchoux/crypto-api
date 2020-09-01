@@ -19,6 +19,9 @@
 h1{
   padding-bottom: 1rem;
 }
+h3{
+  text-transform: capitalize;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,6 +41,18 @@ h1{
 th{
   width: 25%;
   padding: 1rem;
+}
+table{
+  padding-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+.graph{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+ 
 }
 
 .price{
