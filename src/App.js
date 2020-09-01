@@ -19,7 +19,7 @@ export default class App extends Component {
     // Get the api form the local storage
     const apiFromLocalStorage = JSON.parse(localStorage.getItem("api"));
     // If the api is not in the local storage, get the api from Axios and update the state and the local storage
-    /*  if (apiFromLocalStorage.datas === null)  */ this.updateStateWithAxios();
+     if (apiFromLocalStorage.time === null)   this.updateStateWithAxios();
     //console.log(apiFromLocalStorage)
     //console.log('data', this.state.api.datas)
     // check if the "time" date from local storage is older than 5min.
